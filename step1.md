@@ -17,7 +17,7 @@ This process allows you to manually aggregate the files of your project into a s
 Main script:
 ```js
 (() => {
-  const SELECTOR = '#\\:r6r\\: > div.flex.items-center.justify-between.px-3.py-1\\.5.bg-white.border-b.border-slate-100';
+  const SELECTOR = "#\\:r6t\\: > div.flex.items-center.justify-between.px-3.py-1\\.5.bg-white.border-b.border-slate-100 > div";
 
   // Global store (persistent during session)
   window.__fileDump = window.__fileDump || {};
