@@ -1,13 +1,18 @@
+# Manual Project Consolidation (Step 1)
 
-1. Open your Base44 project, go to the Code view
-1. Open dev tools (F12), go to the console tab
-1. Copy the code below (Main script) in the javascript console, follow the instructions if it asks to type "allow pasting"
-1. Start opening each file sequentially, order doesn't matter, it's okay if you skip one and come back to it
-1. keep an eye on the javascript console, there should be a message for each captured file, sometimes it takes a second or two to capture
-1. when you're done, copy-paste the End script into the console
-1. Save the "dump.json" file, it contains your whole project
-1. Open step2.html, drag your dump.json file onto the upload button (or click it and select your dump file)
-1. either download as a zip or write to disk, it will ask for a folder to write to, it's slower than the zip, leave it be for a minute
+This process allows you to manually aggregate the files of your project into a single JSON archive for local storage. This is a multi-step, user-driven process.
+
+## Instructions
+1. **Open your Project**: Navigate to your project on the platform and enter the Code View.
+1. **Open Developer Tools**: Press `F12` (or `Cmd+Option+I` on Mac) and select the Console tab.
+1. **Initialize the Session**: Copy and paste the Initialization Script below into the console. If prompted by your browser, type `allow pasting` to enable the command line.
+1. **Manually Index Files**: One by one, click on each file in your project sidebar.
+1. As you view each file, the script will temporarily hold the content in your browser's memory.
+1. Check the console for a `[Captured]` confirmation message for each file.
+1. **Finalize & Export**: Once you have manually cycled through all necessary files, copy and paste the End Script into the console.
+1. **Save Archive**: A file named `dump.json` will be generated. Save this to your computer.
+1. Open step2.html, drag your `dump.json` file onto the upload button (or click it and select your dump file)
+1. Either download as a zip or write to disk, it will ask for a folder to write to, it's slower than the zip, leave it be for a minute
 
 Main script:
 ```js
@@ -63,7 +68,7 @@ Main script:
     URL.revokeObjectURL(a.href);
   };
 
-  console.log('📦 File dump capture started');
+  console.log ( '📦 Archiving session started. Please click through your files to index them.' ) ;
 })();
 ```
 
